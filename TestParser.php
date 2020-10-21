@@ -14,8 +14,14 @@
  */
 
 namespace Fingli;
+use function MongoDB\BSON\toJSON;
 
-class ParserCoreDebug extends ParserCore
+require 'ParserCore.php';
+require 'ParserInterface.php';
+
+
+
+class ParserCoreDebug extends ParserCore implements ParserInterface
 {
     const USER_ID = 2;
     const FEED_ID = 2;
@@ -25,15 +31,15 @@ class ParserCoreDebug extends ParserCore
     // для подделки запроса к URL нужно добавить элемент массива в файле emulateHtml.php
     protected const EMULATE_MODE = true;
     // включить дебаг-режим (только для разработки)
-    protected const DEBUG = true;
+    protected const DEBUG = false;
     // дебаг-режим  (только для разработки) [core, default]
     //    protected const DEBUG_MODE = 'talkative';
     protected const DEBUG_MODE = 'default';
 
     public function __construct()
     {
-        // 1 - desktop
-        // 2 - rss
+        // 1 - desktop emulate
+        // 2 - rss emulate
         // 3 - CORE_ClassicalmusicnewsParsingRu_Parser
         $configType = 2;
 
@@ -376,4 +382,7 @@ class ParserCoreDebug extends ParserCore
 }
 
 
-ParserCoreDebug::run();
+$posts = ParserCoreDebug::run();
+foreach ($posts as $value){
+    print_r($value);
+}

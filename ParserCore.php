@@ -24,6 +24,10 @@ use yii\base\Exception;
 use DateTimeImmutable;
 use DateInterval;
 use wapmorgan\TimeParser\TimeParser;
+require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/components/NewsPost.php';
+require __DIR__.'/components/NewsPostItem.php';
+require __DIR__.'/components/Helper.php';
 
 /**
  * # Ядро для парсеров
@@ -69,7 +73,7 @@ class ParserCore
     // доступные режимы работы парсера
     private const  MODE_TYPES = ['desktop', 'mobile', 'rss'];
     // путь до папки со вспомогательными файлами
-    private const WORK_DIR = __DIR__ . '/../mediasfera/';
+    private const WORK_DIR = __DIR__ . '/';
     // лимит на кол-во элементов по умолчанию
     private const MAX_ITEMS = 100;
     // лимит на кол-во элементов
@@ -2043,6 +2047,8 @@ class ParserCore
     : ?string {
         $emulateData  = [];
         $fileWithData = self::WORK_DIR . 'emulateHtml.php';
+
+        print("File exist: {$fileWithData}");
 
         if (file_exists($fileWithData))
         {
