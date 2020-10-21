@@ -380,9 +380,3 @@ class ParserCoreDebug extends ParserCore implements ParserInterface
         return $posts;
     }
 }
-
-
-$posts = ParserCoreDebug::run();
-foreach ($posts as $value){
-    print_r($value);
-}
