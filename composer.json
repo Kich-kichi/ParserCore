@@ -36,7 +36,7 @@
   },
   "autoload": {
     "psr-4": {
-      "fingli\\ParserCore\\": "/"
+      "fingli\\ParserCore\\": ""
     },
     "exclude-from-classmap": [
       "/Tests/"
@@ -44,6 +44,6 @@
   },
   "minimum-stability": "stable",
   "extra": {
-    "branch-version": "1.0"
+    "branch-version": "1.1"
   }
 }
