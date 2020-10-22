@@ -2,7 +2,12 @@
   "name": "fingli/parser-core",
   "type": "library",
   "description": "PHP news parser core",
-  "keywords": ["parser", "news", "html", "rss"],
+  "keywords": [
+    "parser",
+    "news",
+    "html",
+    "rss"
+  ],
   "license": "MIT",
   "authors": [
     {
@@ -36,7 +41,7 @@
   },
   "autoload": {
     "psr-4": {
-      "fingli\\\\parserCore\\": "src/"
+      "fingli\\parserCore\\": "src/"
     },
     "exclude-from-classmap": [
       "/tests/"
