@@ -9,7 +9,7 @@
  *
  */
 
-namespace Fingli;
+namespace fingli;
 
 use components\NewsPostItem;
 use components\NewsPost;
@@ -24,10 +24,10 @@ use yii\base\Exception;
 use DateTimeImmutable;
 use DateInterval;
 use wapmorgan\TimeParser\TimeParser;
-require __DIR__.'/vendor/autoload.php';
-require __DIR__.'/components/NewsPost.php';
-require __DIR__.'/components/NewsPostItem.php';
-require __DIR__.'/components/Helper.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/components/NewsPost.php';
+require __DIR__ . '/components/NewsPostItem.php';
+require __DIR__ . '/components/Helper.php';
 
 /**
  * # Ядро для парсеров

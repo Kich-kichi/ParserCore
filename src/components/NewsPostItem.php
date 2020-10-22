@@ -1,7 +1,7 @@
 <?php
 
 
-namespace components;
+namespace fingli\components;
 
 use components\Helper;
 use yii\base\Exception;

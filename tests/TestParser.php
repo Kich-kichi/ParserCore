@@ -14,10 +14,9 @@
  */
 
 namespace Fingli;
-use function MongoDB\BSON\toJSON;
 
-require 'ParserCore.php';
-require 'ParserInterface.php';
+require 'src/ParserCore.php';
+require 'src/ParserInterface.php';
 
 
 
@@ -379,4 +378,10 @@ class ParserCoreDebug extends ParserCore implements ParserInterface
 
         return $posts;
     }
+}
+
+
+$posts = ParserCoreDebug::run();
+foreach ($posts as $value){
+    print_r($value);
 }
