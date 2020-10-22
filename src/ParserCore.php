@@ -287,6 +287,9 @@ class ParserCore
 
     public function __construct()
     {
+        static::showLog("New version", 'warning', true, true);
+        die();
+
         if (static::EMULATE_MODE)
         {
             static::showLog('--- Внимание! Включен режим эмуляции http запросов. Реальные запросы не делаются ---', 'warning', true, true);
