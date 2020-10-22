@@ -1,6 +1,6 @@
 <?php
 
-namespace fingli;
+namespace fingli\parserCore;
 
 interface ParserInterface
 {

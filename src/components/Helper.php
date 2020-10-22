@@ -1,6 +1,6 @@
 <?php
 
-namespace fingli\components;
+namespace fingli\parserCore\components;
 
 use linslin\yii2\curl\Curl;
 

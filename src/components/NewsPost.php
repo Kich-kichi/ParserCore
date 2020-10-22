@@ -1,7 +1,7 @@
 <?php
 
 
-namespace fingli\components;
+namespace fingli\parserCore\components;
 
 
 use DateTime;

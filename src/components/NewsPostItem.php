@@ -1,9 +1,9 @@
 <?php
 
 
-namespace fingli\components;
+namespace fingli\parserCore\components;
 
-use components\Helper;
+use fingli\parserCore\components\Helper;
 use yii\base\Exception;
 
 /**
